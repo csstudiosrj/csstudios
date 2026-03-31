@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contratos de Serviço | CS studios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/style.css">
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans:['Outfit', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] }, colors: { dark: '#050505', darker: '#0a0a0a', card: '#111111', accent: '#3b82f6' } } } }
+    </script>
+</head>
+<body class="bg-dark text-slate-300 font-sans">
+
+    <!-- Navbar Simplificada -->
+    <nav class="w-full glass border-b border-white/5 py-4">
+        <div class="container mx-auto px-6">
+            <a href="../index.html" class="flex items-baseline gap-1">
+                <span class="font-display font-bold text-2xl text-white tracking-tighter">CS</span>
+                <span class="font-light text-xs tracking-[0.3em] text-slate-400 uppercase">studios</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Conteúdo do Documento -->
+    <section class="py-20">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <a href="../index.html" class="text-accent hover:text-white transition text-sm mb-8 inline-block"><i class="fas fa-arrow-left mr-2"></i> Voltar para Home</a>
+            
+            <h1 class="text-4xl font-display font-bold text-white mb-4">Contratos de Prestação de Serviço</h1>
+            <p class="text-slate-500 mb-12 pb-6 border-b border-white/10">Última atualização: Outubro de 2024</p>
+
+            <div class="prose prose-invert max-w-none text-slate-400 space-y-8">
+                
+                <div>
+                    <h2 class="text-2xl text-white font-bold mb-4">1. Desenvolvimento de Landing Pages e Configuração (GSC)</h2>
+                    <p>Este termo rege o serviço de criação de design, programação e indexação de páginas da web (Landing Pages). A CS studios se compromete a entregar o layout funcional e otimizado no prazo estipulado em proposta comercial após o envio de todos os materiais por parte do cliente.</p>
+                    <p class="mt-2">Alterações no escopo da página após a aprovação do layout poderão acarretar em cobranças adicionais. A CS studios não garante a primeira posição nos buscadores, mas garante a aplicação das melhores práticas de SEO exigidas pela plataforma.</p>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl text-white font-bold mb-4">2. Hospedagem e Registro de Domínio</h2>
+                    <p>Nossa infraestrutura de hospedagem é baseada nos mais rigorosos padrões de segurança e estabilidade, garantindo um uptime de 99.9%. Os serviços de hospedagem e contas de e-mail são faturados de forma anual (R$ 598,80).</p>
+                    <ul class="list-disc pl-5 mt-4 space-y-2">
+                        <li>O não pagamento da anuidade até a data de vencimento causará a suspensão imediata dos serviços.</li>
+                        <li>A CS studios não se responsabiliza por perdas de dados resultantes de uso indevido do cliente no cPanel.</li>
+                        <li>O registro de domínio será feito em nome do cliente, possuindo taxa anual de renovação (R$ 59,99). A não renovação acarretará na perda do nome de domínio.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl text-white font-bold mb-4">3. Contas de E-mail Profissionais</h2>
+                    <p>A hospedagem premium inclui o direito a 1 (uma) conta de e-mail. Contas adicionais com capacidade de 25GB possuem o custo anual de R$ 71,88. O uso da infraestrutura de e-mail para envio de SPAM resultará no cancelamento definitivo da conta sem reembolso.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
