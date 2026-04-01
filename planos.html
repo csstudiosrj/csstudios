@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos e Valores | CS studios</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], display:['Space Grotesk', 'sans-serif'] },
+                    colors: { background: '#030712', surface: '#0B1120', primary: '#3B82F6' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-slate-300 font-sans antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navbar Simples -->
+    <nav class="fixed w-full z-50 glass-header transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors text-sm font-medium">
+                <i class="fas fa-arrow-left"></i> Voltar ao Início
+            </a>
+            <a href="https://wa.me/5521996882977" target="_blank" class="text-xs font-medium text-white border border-white/10 px-5 py-2 rounded-full hover:bg-white/5 transition-all">
+                Dúvidas? Fale conosco
+            </a>
+        </div>
+    </nav>
+
+    <!-- Header Planos -->
+    <section class="pt-32 pb-16 text-center px-6">
+        <h1 class="text-4xl md:text-6xl font-display font-bold text-white tracking-tight mb-6">Investimento Transparente</h1>
+        <p class="text-slate-400 max-w-2xl mx-auto font-light text-lg">
+            Valores justos para um serviço de excelência. Oferecemos descontos agressivos para pagamentos via PIX ou a flexibilidade de parcelamento no cartão.
+        </p>
+    </section>
+
+    <!-- Pacotes Principais -->
+    <section class="py-12">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- Pacote Básico -->
+                <div class="premium-card p-10 rounded-3xl flex flex-col" data-aos="fade-up">
+                    <h3 class="text-2xl font-display font-bold text-white mb-2">Pacote Básico</h3>
+                    <p class="text-slate-500 text-sm mb-8 font-light">Ideal para quem já possui domínio e hospedagem.</p>
+                    
+                    <div class="mb-8 border-b border-white/5 pb-8">
+                        <div class="text-slate-400 text-[10px] uppercase tracking-widest font-bold mb-2">Valor à vista (PIX)</div>
+                        <div class="text-4xl font-display font-bold text-white mb-4">R$ 500<span class="text-lg text-slate-500">,00</span></div>
+                        
+                        <div class="bg-surface p-4 rounded-xl border border-white/5">
+                            <div class="text-slate-500 text-[10px] uppercase tracking-widest font-bold mb-1">Ou no Cartão (até 12x)</div>
+                            <div class="text-lg font-medium text-slate-300">R$ 660,00</div>
+                        </div>
+                    </div>
+
+                    <ul class="space-y-4 text-sm text-slate-300 mb-10 flex-grow">
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-primary mt-1"></i> <div>Criação de Landing Page Premium</div></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-primary mt-1"></i> <div>Configuração Google Index (GSC)</div></li>
+                        <li class="flex items-start gap-3 text-slate-600"><i class="fas fa-xmark mt-1"></i> <div>Hospedagem não inclusa</div></li>
+                    </ul>
+
+                    <div class="flex flex-col gap-3">
+                        <a href="LINK_PIX_500" target="_blank" class="w-full text-center bg-white text-background py-4 rounded-xl font-semibold hover:bg-slate-200 transition text-sm">Contratar via PIX</a>
+                        <a href="LINK_STRIPE_660" target="_blank" class="w-full text-center border border-white/10 text-white py-4 rounded-xl font-medium hover:bg-white/5 transition text-sm">Pagar no Cartão</a>
+                    </div>
+                </div>
+
+                <!-- Pacote Completo -->
+                <div class="premium-card p-10 rounded-3xl flex flex-col relative border-primary/30" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute top-0 right-8 bg-primary text-white text-[10px] font-bold px-4 py-1.5 rounded-b-lg uppercase tracking-widest">Solução Completa</div>
+                    
+                    <h3 class="text-2xl font-display font-bold text-white mb-2">Pacote Completo</h3>
+                    <p class="text-slate-500 text-sm mb-8 font-light">Toda a infraestrutura do seu negócio resolvida.</p>
+                    
+                    <div class="mb-8 border-b border-white/5 pb-8">
+                        <div class="text-primary text-[10px] uppercase tracking-widest font-bold mb-2">Valor à vista (PIX)</div>
+                        <div class="text-4xl font-display font-bold text-white mb-2">R$ 1.159<span class="text-lg text-slate-500">,00</span></div>
+                        <p class="text-xs text-slate-500 mb-4">*Aprox. 12x de R$ 115,00 via Pix Parcelado (Mercado Pago).</p>
+                        
+                        <div class="bg-primary/10 p-4 rounded-xl border border-primary/20">
+                            <div class="text-blue-300 text-[10px] uppercase tracking-widest font-bold mb-1">Ou no Cartão (até 12x)</div>
+                            <div class="text-lg font-medium text-white">R$ 1.540,00</div>
+                        </div>
+                    </div>
+
+                    <ul class="space-y-4 text-sm text-slate-300 mb-10 flex-grow">
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-primary mt-1"></i> <div>Criação de Landing Page Premium</div></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-primary mt-1"></i> <div>Configuração Google Index (GSC)</div></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-primary mt-1"></i> <div>Registro de Domínio (1 ano)</div></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-primary mt-1"></i> <div>Hospedagem de Alta Performance (1 ano)</div></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-primary mt-1"></i> <div>1 Conta de E-mail Corporativo</div></li>
+                    </ul>
+
+                    <div class="flex flex-col gap-3">
+                        <a href="LINK_PIX_1159" target="_blank" class="w-full text-center bg-primary text-white py-4 rounded-xl font-semibold hover:bg-blue-600 transition text-sm shadow-lg shadow-primary/20">Contratar via PIX</a>
+                        <a href="LINK_STRIPE_1540" target="_blank" class="w-full text-center border border-white/10 text-white py-4 rounded-xl font-medium hover:bg-white/5 transition text-sm">Pagar no Cartão</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Avulsos e Infraestrutura -->
+    <section class="py-20">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <h3 class="text-2xl font-display font-bold text-white mb-8">Serviços Avulsos & Infraestrutura</h3>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Hospedagem -->
+                <div class="premium-card p-8 rounded-2xl flex flex-col justify-between" data-aos="fade-up">
+                    <div>
+                        <h4 class="text-lg font-bold text-white mb-2">Hospedagem Premium + E-mail</h4>
+                        <p class="text-sm text-slate-400 mb-6">Servidor seguro com SSL e e-mail profissional. Faturamento exclusivamente anual.</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-display font-bold text-white mb-1">R$ 49<span class="text-sm text-slate-500">,90/mês</span></div>
+                        <div class="text-xs text-slate-500 mb-4">Faturado anualmente por R$ 598,80 (PIX) ou R$ 790,00 (Cartão).</div>
+                        <a href="LINK_HOSPEDAGEM" target="_blank" class="text-primary text-sm font-medium hover:text-white transition">Assinar Hospedagem &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Logo -->
+                <div class="premium-card p-8 rounded-2xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <h4 class="text-lg font-bold text-white mb-2">Identidade Visual (Logo)</h4>
+                        <p class="text-sm text-slate-400 mb-6">Criação de logotipo profissional e paleta de cores para estruturar a sua marca.</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-display font-bold text-white mb-1">R$ 250<span class="text-sm text-slate-500">,00</span></div>
+                        <div class="text-xs text-slate-500 mb-4">Valor à vista no PIX. No cartão: R$ 330,00.</div>
+                        <a href="LINK_LOGO" target="_blank" class="text-primary text-sm font-medium hover:text-white transition">Solicitar Design &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Landing Page Avulsa -->
+                <div class="premium-card p-8 rounded-2xl flex flex-col justify-between" data-aos="fade-up">
+                    <div>
+                        <h4 class="text-lg font-bold text-white mb-2">Landing Page (Página Única)</h4>
+                        <p class="text-sm text-slate-400 mb-6">Design focado em conversão e velocidade.</p>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-display font-bold text-white mb-1">R$ 350,00 <span class="text-xs text-slate-500 font-sans font-normal">(PIX)</span></div>
+                        <a href="LINK_LANDING" target="_blank" class="text-primary text-sm font-medium hover:text-white transition mt-2 inline-block">Contratar &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Google GSC -->
+                <div class="premium-card p-8 rounded-2xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <h4 class="text-lg font-bold text-white mb-2">Configuração Google (GSC)</h4>
+                        <p class="text-sm text-slate-400 mb-6">Indexação técnica nos motores de busca.</p>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-display font-bold text-white mb-1">R$ 250,00 <span class="text-xs text-slate-500 font-sans font-normal">(PIX)</span></div>
+                        <a href="LINK_GOOGLE" target="_blank" class="text-primary text-sm font-medium hover:text-white transition mt-2 inline-block">Contratar &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-white/5 text-center mt-12">
+        <div class="font-display font-bold text-xl text-white mb-2 tracking-tighter">CS studios</div>
+        <p class="text-slate-600 text-[10px] uppercase tracking-[0.3em]">Design & Infraestrutura Digital</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+</body>
+</html>
