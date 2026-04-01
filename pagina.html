@@ -3,124 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CS studios | Soluções Digitais Premium 2026</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <title>CS studios | Design e Infraestrutura Digital</title>
+    <meta name="description" content="Transformamos visitantes em clientes com páginas de alta conversão e infraestrutura premium.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Outfit', 'sans-serif'], display:['Space Grotesk', 'sans-serif'] },
-                    colors: { dark: '#050505', darker: '#0a0a0a', accent: '#3b82f6' }
+                    fontFamily: { sans:['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] },
+                    colors: { background: '#030712', surface: '#0B1120', primary: '#3B82F6' }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-dark text-slate-300 overflow-x-hidden selection:bg-accent selection:text-white">
+<body class="bg-background text-slate-300 font-sans antialiased selection:bg-primary selection:text-white">
 
-    <nav class="fixed w-full z-50 glass border-b border-white/5 py-4">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="#" class="flex items-baseline gap-1 group">
-                <span class="font-display font-bold text-3xl text-white group-hover:text-accent transition-colors">CS</span>
-                <span class="font-light text-sm tracking-[0.3em] text-slate-400 uppercase">studios</span>
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-header transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="flex items-center gap-2">
+                <span class="font-display font-bold text-2xl text-white tracking-tighter">CS</span>
+                <span class="text-[10px] font-medium uppercase tracking-[0.2em] text-slate-400 mt-1">studios</span>
             </a>
-            <a href="https://wa.me/5521996882977" target="_blank" class="bg-accent hover:bg-blue-600 text-white px-6 py-2 rounded-full text-xs font-bold transition flex items-center gap-2">
-                <i class="fab fa-whatsapp"></i> WhatsApp
+            
+            <div class="hidden md:flex gap-8 text-xs font-medium uppercase tracking-widest text-slate-400">
+                <a href="#expertise" class="hover:text-white transition-colors">Expertise</a>
+                <a href="#metodo" class="hover:text-white transition-colors">Método</a>
+                <a href="/planos" class="text-white hover:text-primary transition-colors">Planos e Valores</a>
+            </div>
+
+            <a href="https://wa.me/5521996882977" target="_blank" class="hidden md:flex items-center gap-2 text-xs font-medium text-white border border-white/10 px-5 py-2 rounded-full hover:bg-white/5 transition-all">
+                Falar com a equipe
             </a>
         </div>
     </nav>
 
-    <section class="min-h-screen flex items-center justify-center pt-20">
-        <div class="container mx-auto px-6 text-center">
-            <div class="inline-block mb-6 px-4 py-1 rounded-full border border-accent/30 bg-accent/10 text-accent text-[10px] font-bold uppercase tracking-widest italic">Performance Digital 2026</div>
-            <h1 class="text-5xl md:text-8xl font-display font-bold text-white mb-8 tracking-tighter leading-none">Domine o mercado com <br><span class="text-accent italic">Design de Elite.</span></h1>
-            <p class="text-slate-400 max-w-2xl mx-auto mb-12 font-light text-lg">Projetos exclusivos para quem não aceita o comum. Recebimento integral via PIX ou parcelamento em até 12x no cartão.</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#planos" class="bg-white text-dark px-10 py-4 rounded-full font-bold hover:bg-accent hover:text-white transition shadow-2xl">Consultar Tabela</a>
-                <a href="https://wa.me/5521996882977" target="_blank" class="bg-white/5 border border-white/10 text-white px-10 py-4 rounded-full font-bold hover:bg-white/10 transition">Falar com Especialista</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- TABELA DE PREÇOS RECALCULADA -->
-    <section id="planos" class="py-24 bg-darker border-t border-white/5">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <!-- Glow effects sutis -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/10 blur-[120px] rounded-full pointer-events-none"></div>
+        
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <span class="inline-block py-1 px-3 rounded-full border border-white/10 bg-white/5 text-[10px] font-medium uppercase tracking-widest text-slate-300 mb-8">
+                    Design • Performance • Conversão
+                </span>
                 
-                <!-- Pacote Básico -->
-                <div class="card-glass p-10 rounded-[2.5rem] flex flex-col border border-white/5 hover:border-accent/20 transition-all">
-                    <h3 class="text-2xl font-display font-bold text-white mb-2">Pacote Básico</h3>
-                    <p class="text-slate-500 text-sm mb-8">Landing Page + Configuração Google Index</p>
-                    
-                    <div class="space-y-6 mb-10">
-                        <div class="p-6 bg-accent/10 rounded-3xl border border-accent/20">
-                            <div class="text-accent font-bold text-[10px] mb-1 uppercase tracking-widest">Preço Especial PIX</div>
-                            <div class="text-5xl font-display font-bold text-white tracking-tighter">R$ 500<span class="text-xl">,00</span></div>
-                        </div>
-                        <div class="px-6">
-                            <div class="text-slate-500 text-[10px] mb-1 uppercase tracking-widest font-bold">Cartão (até 12x)</div>
-                            <div class="text-2xl font-bold text-white/50 tracking-tighter italic">R$ 660,00</div>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col gap-3 mt-auto">
-                        <a href="SEU_LINK_PIX_MERCADO_PAGO_660" target="_blank" class="w-full text-center bg-white text-dark py-5 rounded-2xl font-black hover:bg-accent hover:text-white transition uppercase tracking-widest text-sm italic shadow-xl">Pagar via PIX (Desconto)</a>
-                        <a href="SEU_LINK_STRIPE_660" target="_blank" class="w-full text-center bg-transparent border border-white/10 text-white py-4 rounded-2xl font-bold hover:bg-white/5 transition text-xs opacity-60 uppercase tracking-tighter">Pagar no Cartão em até 12x</a>
-                    </div>
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white tracking-tighter leading-[1.1] mb-6 max-w-5xl mx-auto">
+                    Sua empresa merece mais do que <span class="text-gradient-blue">uma rede social.</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-slate-400 font-light max-w-2xl mx-auto mb-12 leading-relaxed">
+                    Construímos ativos digitais de alto padrão. Páginas otimizadas, infraestrutura segura e design focado em transformar visitantes em clientes reais.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="/planos" class="w-full sm:w-auto bg-white text-background px-8 py-4 rounded-full text-sm font-semibold hover:bg-slate-200 transition-all">
+                        Ver Planos e Valores
+                    </a>
+                    <a href="#expertise" class="w-full sm:w-auto text-slate-300 px-8 py-4 text-sm font-medium hover:text-white transition-all flex items-center justify-center gap-2">
+                        Entender o processo <i class="fas fa-arrow-down text-[10px]"></i>
+                    </a>
                 </div>
-
-                <!-- Pacote Completo -->
-                <div class="card-glass p-10 rounded-[2.5rem] flex flex-col border border-accent/40 bg-accent/5 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-accent text-white text-[9px] font-black px-5 py-2 rounded-bl-2xl uppercase tracking-[0.2em] shadow-lg">Solução Total</div>
-                    
-                    <h3 class="text-2xl font-display font-bold text-white mb-2">Pacote Completo</h3>
-                    <p class="text-slate-400 text-sm mb-8 font-light italic">Toda a infraestrutura do seu negócio no ar.</p>
-                    
-                    <div class="space-y-6 mb-10">
-                        <div class="p-6 bg-accent/20 rounded-3xl border border-accent/30 shadow-[0_0_40px_rgba(59,130,246,0.1)]">
-                            <div class="text-accent font-bold text-[10px] mb-1 uppercase tracking-widest">Preço Especial PIX</div>
-                            <div class="text-5xl font-display font-bold text-white tracking-tighter">R$ 1.159<span class="text-xl">,00</span></div>
-                        </div>
-                        <div class="px-6">
-                            <div class="text-slate-500 text-[10px] mb-1 uppercase tracking-widest font-bold">Cartão (até 12x)</div>
-                            <div class="text-2xl font-bold text-white/50 tracking-tighter italic">R$ 1.540,00</div>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col gap-3 mt-auto">
-                        <a href="SEU_LINK_PIX_MERCADO_PAGO_1159" target="_blank" class="w-full text-center bg-accent text-white py-5 rounded-2xl font-black hover:bg-blue-600 transition uppercase tracking-widest text-sm italic shadow-[0_15px_30px_rgba(59,130,246,0.4)]">Pagar via PIX (Desconto)</a>
-                        <a href="SEU_LINK_STRIPE_1540" target="_blank" class="w-full text-center bg-transparent border border-white/10 text-white py-4 rounded-2xl font-bold hover:bg-white/5 transition text-xs opacity-60 uppercase tracking-tighter">Pagar no Cartão em até 12x</a>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq" class="py-24 bg-dark">
-        <div class="container mx-auto px-6 max-w-3xl">
-            <h2 class="text-2xl font-display font-bold text-white mb-10 text-center uppercase tracking-[0.3em] opacity-40">Informações Importantes</h2>
-            <div class="space-y-4">
-                <details class="group card-glass rounded-3xl cursor-pointer p-8 border border-white/5">
-                    <summary class="flex justify-between items-center font-bold text-white list-none">Como funciona o repasse de taxas? <i class="fas fa-plus text-accent group-open:rotate-45 transition-transform"></i></summary>
-                    <p class="text-slate-400 text-sm mt-6 leading-relaxed">No valor parcelado em 12x, já embutimos as taxas de processamento e antecipação bancária para que seu projeto comece no mesmo dia. No PIX, como não há taxas bancárias de crédito, repassamos esse desconto integralmente para você.</p>
-                </details>
-                <details class="group card-glass rounded-3xl cursor-pointer p-8 border border-white/5">
-                    <summary class="flex justify-between items-center font-bold text-white list-none">O PIX Parcelado é aceito? <i class="fas fa-plus text-accent group-open:rotate-45 transition-transform"></i></summary>
-                    <p class="text-slate-400 text-sm mt-6 leading-relaxed">Sim! Você pode utilizar a função "PIX Parcelado" do seu banco. Nós recebemos o valor com desconto à vista e você paga as parcelas direto para a sua instituição financeira.</p>
-                </details>
+    <!-- Por que ter um site? (O Problema e a Solução) -->
+    <section id="metodo" class="py-32 bg-surface relative border-y border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-6 tracking-tight leading-tight">
+                        A invisibilidade digital custa caro.
+                    </h2>
+                    <p class="text-slate-400 leading-relaxed mb-8 font-light">
+                        Depender exclusivamente de redes sociais coloca o seu negócio à mercê de algoritmos imprevisíveis. Um site próprio não é apenas um cartão de visitas, é o seu terreno na internet. É onde você dita as regras, transmite autoridade e atende seu cliente 24 horas por dia, 7 dias por semana.
+                    </p>
+                    <ul class="space-y-4 text-sm text-slate-300">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-primary"></i> Posicionamento profissional no Google.</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-primary"></i> Credibilidade imediata para novos clientes.</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-primary"></i> Ambiente livre da concorrência.</li>
+                    </ul>
+                </div>
+                <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
+                    <div class="premium-card p-8 rounded-3xl flex flex-col justify-center aspect-square">
+                        <i class="fas fa-search text-3xl text-slate-500 mb-4"></i>
+                        <h3 class="text-white font-display font-bold text-xl mb-2">Busca</h3>
+                        <p class="text-xs text-slate-400">Seja encontrado por quem já procura pelo seu serviço.</p>
+                    </div>
+                    <div class="premium-card p-8 rounded-3xl flex flex-col justify-center aspect-square mt-8">
+                        <i class="fas fa-bolt text-3xl text-slate-500 mb-4"></i>
+                        <h3 class="text-white font-display font-bold text-xl mb-2">Velocidade</h3>
+                        <p class="text-xs text-slate-400">Páginas ultrarrápidas que retêm a atenção do usuário.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 border-t border-white/5 text-center bg-darker">
-        <div class="font-display font-bold text-2xl text-white mb-4 tracking-tighter">CS studios</div>
-        <p class="text-slate-600 text-[9px] font-bold uppercase tracking-[0.6em]">Premium Digital Agency • 2026</p>
+    <!-- Nossa Expertise -->
+    <section id="expertise" class="py-32">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-20" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-6 tracking-tight">Nossa Expertise</h2>
+                <p class="text-slate-400 font-light">Dominamos as ferramentas necessárias para construir e hospedar a sua marca com excelência técnica.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Servico 1 -->
+                <div class="premium-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white mb-6 border border-white/10">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3 class="text-white font-display font-bold text-lg mb-3">Landing Pages</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">Páginas únicas focadas em conversão. Design responsivo, moderno e alinhado à identidade da sua empresa.</p>
+                </div>
+                <!-- Servico 2 -->
+                <div class="premium-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white mb-6 border border-white/10">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <h3 class="text-white font-display font-bold text-lg mb-3">Google Index (GSC)</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">Configuração técnica no Google Search Console para garantir que seu site seja lido e indexado corretamente.</p>
+                </div>
+                <!-- Servico 3 -->
+                <div class="premium-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white mb-6 border border-white/10">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="text-white font-display font-bold text-lg mb-3">Infraestrutura</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">Hospedagem premium de alta performance, certificado SSL de segurança e contas de e-mail corporativas.</p>
+                </div>
+                <!-- Servico 4 -->
+                <div class="premium-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white mb-6 border border-white/10">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                    <h3 class="text-white font-display font-bold text-lg mb-3">Identidade Visual</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">Criação de logotipos profissionais e tipografia estratégica para transmitir o valor correto da sua marca.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-24 bg-surface border-t border-white/5 text-center">
+        <div class="container mx-auto px-6" data-aos="zoom-in">
+            <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-6 tracking-tight">Pronto para elevar o seu negócio?</h2>
+            <p class="text-slate-400 mb-10 max-w-xl mx-auto font-light">Conheça nossos pacotes de desenvolvimento e descubra a solução ideal para o seu momento atual.</p>
+            <a href="/planos" class="inline-block bg-primary text-white px-10 py-4 rounded-full text-sm font-semibold hover:bg-blue-600 transition-all shadow-[0_0_20px_rgba(59,130,246,0.3)]">
+                Acessar Tabela de Valores
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 text-center">
+        <div class="container mx-auto px-6">
+            <div class="font-display font-bold text-xl text-white mb-2 tracking-tighter">CS studios</div>
+            <p class="text-slate-600 text-[10px] uppercase tracking-[0.3em] mb-6">Design & Infraestrutura Digital</p>
+            <p class="text-slate-500 text-xs">&copy; 2026 CS studios. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
