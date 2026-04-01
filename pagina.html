@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS studios | Soluções Digitais Premium 2026</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'], display:['Space Grotesk', 'sans-serif'] },
+                    colors: { dark: '#050505', darker: '#0a0a0a', accent: '#3b82f6' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark text-slate-300 overflow-x-hidden selection:bg-accent selection:text-white">
+
+    <nav class="fixed w-full z-50 glass border-b border-white/5 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="flex items-baseline gap-1 group">
+                <span class="font-display font-bold text-3xl text-white group-hover:text-accent transition-colors">CS</span>
+                <span class="font-light text-sm tracking-[0.3em] text-slate-400 uppercase">studios</span>
+            </a>
+            <a href="https://wa.me/5521996882977" target="_blank" class="bg-accent hover:bg-blue-600 text-white px-6 py-2 rounded-full text-xs font-bold transition flex items-center gap-2">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center justify-center pt-20">
+        <div class="container mx-auto px-6 text-center">
+            <div class="inline-block mb-6 px-4 py-1 rounded-full border border-accent/30 bg-accent/10 text-accent text-[10px] font-bold uppercase tracking-widest italic">Performance Digital 2026</div>
+            <h1 class="text-5xl md:text-8xl font-display font-bold text-white mb-8 tracking-tighter leading-none">Domine o mercado com <br><span class="text-accent italic">Design de Elite.</span></h1>
+            <p class="text-slate-400 max-w-2xl mx-auto mb-12 font-light text-lg">Projetos exclusivos para quem não aceita o comum. Recebimento integral via PIX ou parcelamento em até 12x no cartão.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#planos" class="bg-white text-dark px-10 py-4 rounded-full font-bold hover:bg-accent hover:text-white transition shadow-2xl">Consultar Tabela</a>
+                <a href="https://wa.me/5521996882977" target="_blank" class="bg-white/5 border border-white/10 text-white px-10 py-4 rounded-full font-bold hover:bg-white/10 transition">Falar com Especialista</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TABELA DE PREÇOS RECALCULADA -->
+    <section id="planos" class="py-24 bg-darker border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                
+                <!-- Pacote Básico -->
+                <div class="card-glass p-10 rounded-[2.5rem] flex flex-col border border-white/5 hover:border-accent/20 transition-all">
+                    <h3 class="text-2xl font-display font-bold text-white mb-2">Pacote Básico</h3>
+                    <p class="text-slate-500 text-sm mb-8">Landing Page + Configuração Google Index</p>
+                    
+                    <div class="space-y-6 mb-10">
+                        <div class="p-6 bg-accent/10 rounded-3xl border border-accent/20">
+                            <div class="text-accent font-bold text-[10px] mb-1 uppercase tracking-widest">Preço Especial PIX</div>
+                            <div class="text-5xl font-display font-bold text-white tracking-tighter">R$ 500<span class="text-xl">,00</span></div>
+                        </div>
+                        <div class="px-6">
+                            <div class="text-slate-500 text-[10px] mb-1 uppercase tracking-widest font-bold">Cartão (até 12x)</div>
+                            <div class="text-2xl font-bold text-white/50 tracking-tighter italic">R$ 660,00</div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-3 mt-auto">
+                        <a href="SEU_LINK_PIX_MERCADO_PAGO_660" target="_blank" class="w-full text-center bg-white text-dark py-5 rounded-2xl font-black hover:bg-accent hover:text-white transition uppercase tracking-widest text-sm italic shadow-xl">Pagar via PIX (Desconto)</a>
+                        <a href="SEU_LINK_STRIPE_660" target="_blank" class="w-full text-center bg-transparent border border-white/10 text-white py-4 rounded-2xl font-bold hover:bg-white/5 transition text-xs opacity-60 uppercase tracking-tighter">Pagar no Cartão em até 12x</a>
+                    </div>
+                </div>
+
+                <!-- Pacote Completo -->
+                <div class="card-glass p-10 rounded-[2.5rem] flex flex-col border border-accent/40 bg-accent/5 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-accent text-white text-[9px] font-black px-5 py-2 rounded-bl-2xl uppercase tracking-[0.2em] shadow-lg">Solução Total</div>
+                    
+                    <h3 class="text-2xl font-display font-bold text-white mb-2">Pacote Completo</h3>
+                    <p class="text-slate-400 text-sm mb-8 font-light italic">Toda a infraestrutura do seu negócio no ar.</p>
+                    
+                    <div class="space-y-6 mb-10">
+                        <div class="p-6 bg-accent/20 rounded-3xl border border-accent/30 shadow-[0_0_40px_rgba(59,130,246,0.1)]">
+                            <div class="text-accent font-bold text-[10px] mb-1 uppercase tracking-widest">Preço Especial PIX</div>
+                            <div class="text-5xl font-display font-bold text-white tracking-tighter">R$ 1.159<span class="text-xl">,00</span></div>
+                        </div>
+                        <div class="px-6">
+                            <div class="text-slate-500 text-[10px] mb-1 uppercase tracking-widest font-bold">Cartão (até 12x)</div>
+                            <div class="text-2xl font-bold text-white/50 tracking-tighter italic">R$ 1.540,00</div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-3 mt-auto">
+                        <a href="SEU_LINK_PIX_MERCADO_PAGO_1159" target="_blank" class="w-full text-center bg-accent text-white py-5 rounded-2xl font-black hover:bg-blue-600 transition uppercase tracking-widest text-sm italic shadow-[0_15px_30px_rgba(59,130,246,0.4)]">Pagar via PIX (Desconto)</a>
+                        <a href="SEU_LINK_STRIPE_1540" target="_blank" class="w-full text-center bg-transparent border border-white/10 text-white py-4 rounded-2xl font-bold hover:bg-white/5 transition text-xs opacity-60 uppercase tracking-tighter">Pagar no Cartão em até 12x</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-24 bg-dark">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-2xl font-display font-bold text-white mb-10 text-center uppercase tracking-[0.3em] opacity-40">Informações Importantes</h2>
+            <div class="space-y-4">
+                <details class="group card-glass rounded-3xl cursor-pointer p-8 border border-white/5">
+                    <summary class="flex justify-between items-center font-bold text-white list-none">Como funciona o repasse de taxas? <i class="fas fa-plus text-accent group-open:rotate-45 transition-transform"></i></summary>
+                    <p class="text-slate-400 text-sm mt-6 leading-relaxed">No valor parcelado em 12x, já embutimos as taxas de processamento e antecipação bancária para que seu projeto comece no mesmo dia. No PIX, como não há taxas bancárias de crédito, repassamos esse desconto integralmente para você.</p>
+                </details>
+                <details class="group card-glass rounded-3xl cursor-pointer p-8 border border-white/5">
+                    <summary class="flex justify-between items-center font-bold text-white list-none">O PIX Parcelado é aceito? <i class="fas fa-plus text-accent group-open:rotate-45 transition-transform"></i></summary>
+                    <p class="text-slate-400 text-sm mt-6 leading-relaxed">Sim! Você pode utilizar a função "PIX Parcelado" do seu banco. Nós recebemos o valor com desconto à vista e você paga as parcelas direto para a sua instituição financeira.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 border-t border-white/5 text-center bg-darker">
+        <div class="font-display font-bold text-2xl text-white mb-4 tracking-tighter">CS studios</div>
+        <p class="text-slate-600 text-[9px] font-bold uppercase tracking-[0.6em]">Premium Digital Agency • 2026</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+</body>
+</html>
