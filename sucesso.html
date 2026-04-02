@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,41 +13,42 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Outfit', 'sans-serif'],
-                        display:['Space Grotesk', 'sans-serif'],
-                    },
-                    colors: {
-                        dark: '#050505',
-                        card: '#111111',
-                        accent: '#3b82f6'
-                    }
+                    fontFamily: { sans: ['Outfit', 'sans-serif'], display:['Space Grotesk', 'sans-serif'] },
+                    colors: { dark: '#050505', card: '#111111', accent: '#3b82f6' }
                 }
             }
         }
     </script>
     <style>
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-        }
+        .glass-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); }
+        .glass { background: rgba(10, 10, 10, 0.4); backdrop-filter: blur(12px); }
     </style>
 </head>
-<body class="bg-dark text-slate-300 font-sans min-h-screen flex flex-col items-center justify-center relative overflow-x-hidden selection:bg-accent selection:text-white py-12">
+<body class="bg-dark text-slate-300 font-sans min-h-screen flex flex-col items-center justify-center relative overflow-x-hidden selection:bg-accent selection:text-white pt-24 pb-12">
 
     <!-- Efeitos de Luz -->
     <div class="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] bg-accent/20 blur-[120px] rounded-full pointer-events-none z-0"></div>
     <div class="fixed bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-green-500/10 blur-[120px] rounded-full pointer-events-none z-0"></div>
 
-    <div class="container mx-auto px-6 relative z-10 max-w-2xl text-center">
-        
-        <!-- Logo -->
-        <a href="index.html" class="flex items-baseline justify-center gap-1 mb-12">
-            <span class="font-display font-bold text-3xl text-white tracking-tighter">CS</span>
-            <span class="font-light text-sm tracking-[0.3em] text-slate-400 uppercase">studios</span>
-        </a>
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/5 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="/" class="flex items-baseline gap-1 group">
+                <span class="font-display font-bold text-3xl text-white tracking-tighter">CS</span>
+                <span class="font-light text-sm tracking-[0.3em] text-slate-400 uppercase">studios</span>
+            </a>
+            <div class="hidden md:flex gap-4 items-center">
+                <a href="https://seu-link-do-webmail.com" target="_blank" class="text-xs text-slate-400 hover:text-white transition flex items-center gap-2">
+                    <i class="fas fa-envelope"></i> Webmail
+                </a>
+                <a href="https://seu-link-do-whmcs.com" target="_blank" class="bg-white/10 hover:bg-white/20 text-white px-5 py-2 rounded-full text-xs font-bold transition flex items-center gap-2 border border-white/5">
+                    <i class="fas fa-user"></i> Portal do Cliente
+                </a>
+            </div>
+        </div>
+    </nav>
 
+    <div class="container mx-auto px-6 relative z-10 max-w-2xl text-center">
         <!-- Card de Sucesso -->
         <div class="glass-card p-8 md:p-16 rounded-[2.5rem] shadow-2xl border-t-4 border-t-green-500">
             
@@ -74,21 +75,20 @@
                         <div class="w-8 h-8 rounded-full bg-accent/20 text-accent flex items-center justify-center shrink-0 font-bold">2</div>
                         <div>
                             <h4 class="text-white font-bold">Prazos e Domínio</h4>
-                            <p class="text-slate-500 text-sm">Após a aprovação final do design, o prazo técnico para a conexão e propagação do domínio na internet é de até <strong>48h úteis</strong>.</p>
+                            <p class="text-slate-500 text-sm">O desenvolvimento será finalizado em <strong>até 4 dias úteis</strong> após o recebimento dos materiais. Após a sua aprovação final, o prazo técnico para a conexão do domínio na internet é de até <strong>48h úteis</strong>.</p>
                         </div>
                     </li>
                     <li class="flex gap-4">
                         <div class="w-8 h-8 rounded-full bg-accent/20 text-accent flex items-center justify-center shrink-0 font-bold">3</div>
                         <div>
-                            <h4 class="text-white font-bold">Atualizações Futuras</h4>
-                            <p class="text-slate-500 text-sm">Seu site será entregue pronto. Caso precise de atualizações ou modificações no site no futuro, o valor cobrado será de <strong>R$ 150,00 (taxa fixa)</strong> por atualização.</p>
+                            <h4 class="text-white font-bold">Revisões e Atualizações</h4>
+                            <p class="text-slate-500 text-sm">Será permitida apenas <strong>1 (uma) revisão</strong> após a entrega do layout. Caso precise de atualizações futuras no site após a publicação, o valor cobrado será de <strong>R$ 150,00 (taxa fixa)</strong> por atualização.</p>
                         </div>
                     </li>
                 </ul>
             </div>
 
-            <!-- Botão para adiantar o processo -->
-            <a href="https://wa.me/5521999999999" target="_blank" class="inline-flex items-center justify-center gap-3 w-full bg-accent hover:bg-blue-600 text-white py-4 rounded-xl font-bold transition shadow-[0_0_20px_rgba(59,130,246,0.3)]">
+            <a href="https://wa.me/5521996882977" target="_blank" class="inline-flex items-center justify-center gap-3 w-full bg-accent hover:bg-blue-600 text-white py-4 rounded-xl font-bold transition shadow-[0_0_20px_rgba(59,130,246,0.3)]">
                 <i class="fab fa-whatsapp text-xl"></i> Falar com a Equipe Agora
             </a>
             <p class="text-slate-500 text-xs mt-4">Fique de olho no seu e-mail e WhatsApp.</p>
