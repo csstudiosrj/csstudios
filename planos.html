@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planos e Valores | CS studios</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -15,29 +15,49 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans:['Inter', 'sans-serif'], display:['Space Grotesk', 'sans-serif'] },
-                    colors: { background: '#030712', surface: '#0B1120', primary: '#3B82F6' }
+                    fontFamily: { sans: ['Outfit', 'sans-serif'], display:['Space Grotesk', 'sans-serif'] },
+                    colors: { dark: '#050505', darker: '#0a0a0a', card: '#111111', accent: '#3b82f6' }
                 }
             }
         }
     </script>
+    <style>
+        .glass { background: rgba(10, 10, 10, 0.4); backdrop-filter: blur(12px); }
+        .card-glass { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); transition: all 0.3s ease; }
+        .card-glass:hover { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); transform: translateY(-5px); }
+    </style>
 </head>
-<body class="bg-background text-slate-300 font-sans antialiased selection:bg-primary selection:text-white">
+<body class="bg-dark text-slate-300 font-sans overflow-x-hidden selection:bg-accent selection:text-white">
+
+    <!-- Efeitos de Luz no Fundo -->
+    <div class="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] bg-accent/20 blur-[120px] rounded-full pointer-events-none z-0"></div>
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-40 glass-header transition-all duration-300">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="/" class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors text-sm font-medium">
-                <i class="fas fa-arrow-left"></i> Voltar ao Início
+    <nav class="fixed w-full z-40 glass border-b border-white/5 py-4 transition-all duration-300">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="/" class="flex items-baseline gap-1 group">
+                <span class="font-display font-bold text-3xl text-white tracking-tighter group-hover:text-accent transition-colors">CS</span>
+                <span class="font-light text-sm tracking-[0.3em] text-slate-400 uppercase">studios</span>
             </a>
-            <a href="https://wa.me/5521996882977" target="_blank" class="text-xs font-medium text-white border border-white/10 px-5 py-2 rounded-full hover:bg-white/5 transition-all">
-                Dúvidas? Fale conosco
-            </a>
+            <div class="hidden lg:flex gap-8 items-center text-sm font-medium tracking-wide">
+                <a href="/#servicos" class="hover:text-white transition-colors">Serviços</a>
+                <a href="/#infra" class="hover:text-white transition-colors">Infraestrutura</a>
+                <a href="planos.html" class="text-accent font-bold">Planos e Valores</a>
+                <a href="/#faq" class="hover:text-white transition-colors">FAQ</a>
+            </div>
+            <div class="hidden md:flex gap-4 items-center">
+                <a href="https://seu-link-do-webmail.com" target="_blank" class="text-xs text-slate-400 hover:text-white transition flex items-center gap-2">
+                    <i class="fas fa-envelope"></i> Webmail
+                </a>
+                <a href="https://seu-link-do-whmcs.com" target="_blank" class="bg-white/10 hover:bg-white/20 text-white px-5 py-2 rounded-full text-xs font-bold transition flex items-center gap-2 border border-white/5">
+                    <i class="fas fa-user"></i> Portal do Cliente
+                </a>
+            </div>
         </div>
     </nav>
 
     <!-- Header Planos -->
-    <section class="pt-32 pb-16 text-center px-6">
+    <section class="pt-32 pb-16 text-center px-6 relative z-10">
         <h1 class="text-4xl md:text-6xl font-display font-bold text-white tracking-tight mb-6">Investimento Transparente</h1>
         <p class="text-slate-400 max-w-2xl mx-auto font-light text-lg">
             Valores justos para um serviço de excelência. Escolha seu plano e defina a forma de pagamento na próxima etapa.
@@ -45,12 +65,12 @@
     </section>
 
     <!-- Pacotes Principais -->
-    <section class="py-12">
+    <section class="py-12 relative z-10">
         <div class="container mx-auto px-6 max-w-5xl">
             <div class="grid md:grid-cols-2 gap-8">
                 
                 <!-- Pacote Básico -->
-                <div class="premium-card p-10 rounded-3xl flex flex-col" data-aos="fade-up">
+                <div class="card-glass p-10 rounded-[2.5rem] flex flex-col" data-aos="fade-up">
                     <h3 class="text-2xl font-display font-bold text-white mb-2">Pacote Básico</h3>
                     <p class="text-slate-500 text-sm mb-8 font-light">Ideal para quem já possui domínio e hospedagem.</p>
                     
@@ -61,38 +81,38 @@
                     </div>
 
                     <ul class="space-y-4 text-sm text-slate-300 mb-10 flex-grow">
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-primary mt-1"></i> <div>Criação de Landing Page Premium</div></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-primary mt-1"></i> <div>Configuração Google Index (GSC)</div></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1"></i> <div>Criação de Landing Page Premium</div></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1"></i> <div>Configuração Google Index (GSC)</div></li>
                         <li class="flex items-start gap-3 text-slate-600"><i class="fas fa-xmark mt-1"></i> <div>Hospedagem não inclusa</div></li>
                     </ul>
 
-                    <button onclick="openCheckout('Pacote Básico', 'R$ 500,00', 'R$ 660,00', 'SEU_LINK_PIX_BASICO', 'https://buy.stripe.com/eVqfZjeymeK06muduXaIM01')" class="w-full text-center bg-white text-background py-4 rounded-xl font-semibold hover:bg-slate-200 transition text-sm">
+                    <button onclick="openCheckout('Pacote Básico', 'R$ 500,00', 'R$ 660,00', 'SEU_LINK_PIX_BASICO', 'https://buy.stripe.com/eVqfZjeymeK06muduXaIM01')" class="w-full text-center bg-white text-dark py-4 rounded-xl font-semibold hover:bg-slate-200 transition text-sm">
                         Selecionar Plano
                     </button>
                 </div>
 
                 <!-- Pacote Completo -->
-                <div class="premium-card p-10 rounded-3xl flex flex-col relative border-primary/30" data-aos="fade-up" data-aos-delay="100">
-                    <div class="absolute top-0 right-8 bg-primary text-white text-[10px] font-bold px-4 py-1.5 rounded-b-lg uppercase tracking-widest">Solução Completa</div>
+                <div class="card-glass p-10 rounded-[2.5rem] flex flex-col relative border-accent/30 bg-accent/5" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute top-0 right-8 bg-accent text-white text-[10px] font-bold px-4 py-1.5 rounded-b-lg uppercase tracking-widest">Solução Completa</div>
                     
                     <h3 class="text-2xl font-display font-bold text-white mb-2">Pacote Completo</h3>
                     <p class="text-slate-500 text-sm mb-8 font-light">Toda a infraestrutura do seu negócio resolvida.</p>
                     
                     <div class="mb-8 border-b border-white/5 pb-8">
-                        <div class="text-primary text-[10px] uppercase tracking-widest font-bold mb-2">A partir de</div>
+                        <div class="text-accent text-[10px] uppercase tracking-widest font-bold mb-2">A partir de</div>
                         <div class="text-4xl font-display font-bold text-white mb-2">R$ 1.159<span class="text-lg text-slate-500">,00</span></div>
-                        <p class="text-xs text-slate-500">Pagamento único (Fechamento).</p>
+                        <p class="text-xs text-slate-500 mb-4">*Aprox. 12x de R$ 115,00 via Pix Parcelado (Mercado Pago).</p>
                     </div>
 
                     <ul class="space-y-4 text-sm text-slate-300 mb-10 flex-grow">
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-primary mt-1"></i> <div>Criação de Landing Page Premium</div></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-primary mt-1"></i> <div>Configuração Google Index (GSC)</div></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-primary mt-1"></i> <div>Registro de Domínio (1 ano)</div></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-primary mt-1"></i> <div>Hospedagem de Alta Performance (1 ano)</div></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-primary mt-1"></i> <div>1 Conta de E-mail Corporativo</div></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1"></i> <div>Criação de Landing Page Premium</div></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1"></i> <div>Configuração Google Index (GSC)</div></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1"></i> <div>Registro de Domínio (1 ano)</div></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1"></i> <div>Hospedagem de Alta Performance (1 ano)</div></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1"></i> <div>1 Conta de E-mail Corporativo</div></li>
                     </ul>
 
-                    <button onclick="openCheckout('Pacote Completo', 'R$ 1.159,00', 'R$ 1.540,00', 'SEU_LINK_PIX_COMPLETO', 'https://buy.stripe.com/bJe14p9e29pG7qyez1aIM00')" class="w-full text-center bg-primary text-white py-4 rounded-xl font-semibold hover:bg-blue-600 transition text-sm shadow-lg shadow-primary/20">
+                    <button onclick="openCheckout('Pacote Completo', 'R$ 1.159,00', 'R$ 1.540,00', 'SEU_LINK_PIX_COMPLETO', 'https://buy.stripe.com/bJe14p9e29pG7qyez1aIM00')" class="w-full text-center bg-accent text-white py-4 rounded-xl font-semibold hover:bg-blue-600 transition text-sm shadow-lg shadow-accent/20">
                         Selecionar Plano
                     </button>
                 </div>
@@ -102,13 +122,12 @@
     </section>
 
     <!-- Serviços Avulsos -->
-    <section class="py-20">
+    <section class="py-20 relative z-10">
         <div class="container mx-auto px-6 max-w-5xl">
             <h3 class="text-2xl font-display font-bold text-white mb-8">Serviços Avulsos & Infraestrutura</h3>
             
             <div class="grid md:grid-cols-2 gap-6">
-                <!-- Hospedagem -->
-                <div class="premium-card p-8 rounded-2xl flex flex-col justify-between" data-aos="fade-up">
+                <div class="card-glass p-8 rounded-2xl flex flex-col justify-between" data-aos="fade-up">
                     <div>
                         <h4 class="text-lg font-bold text-white mb-2">Hospedagem Premium + E-mail</h4>
                         <p class="text-sm text-slate-400 mb-6">Servidor seguro com SSL e e-mail profissional. Faturamento exclusivamente anual.</p>
@@ -116,94 +135,81 @@
                     <div>
                         <div class="text-3xl font-display font-bold text-white mb-1">R$ 49<span class="text-sm text-slate-500">,90/mês</span></div>
                         <div class="text-xs text-slate-500 mb-4">Faturado anualmente a partir de R$ 598,80.</div>
-                        <button onclick="openCheckout('Hospedagem + E-mail (Anual)', 'R$ 598,80', 'R$ 790,00', 'SEU_LINK_PIX_HOSPEDAGEM', 'https://buy.stripe.com/3cI28teymbxO26eez1aIM04')" class="text-primary text-sm font-medium hover:text-white transition">Assinar Hospedagem &rarr;</button>
+                        <button onclick="openCheckout('Hospedagem + E-mail (Anual)', 'R$ 598,80', 'R$ 790,00', 'SEU_LINK_PIX_HOSPEDAGEM', 'https://buy.stripe.com/3cI28teymbxO26eez1aIM04')" class="text-accent text-sm font-medium hover:text-white transition">Assinar Hospedagem &rarr;</button>
                     </div>
                 </div>
 
-                <!-- Logo -->
-                <div class="premium-card p-8 rounded-2xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-glass p-8 rounded-2xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
                     <div>
                         <h4 class="text-lg font-bold text-white mb-2">Identidade Visual (Logo)</h4>
                         <p class="text-sm text-slate-400 mb-6">Criação de logotipo profissional e paleta de cores para estruturar a sua marca.</p>
                     </div>
                     <div>
                         <div class="text-3xl font-display font-bold text-white mb-1">A partir de R$ 250<span class="text-sm text-slate-500">,00</span></div>
-                        <button onclick="openCheckout('Criação de Logo', 'R$ 250,00', 'R$ 330,00', 'SEU_LINK_PIX_LOGO', 'SEU_LINK_STRIPE_LOGO')" class="text-primary text-sm font-medium hover:text-white transition mt-4 inline-block">Solicitar Design &rarr;</button>
+                        <button onclick="openCheckout('Criação de Logo', 'R$ 250,00', 'R$ 330,00', 'SEU_LINK_PIX_LOGO', 'SEU_LINK_STRIPE_LOGO')" class="text-accent text-sm font-medium hover:text-white transition mt-4 inline-block">Solicitar Design &rarr;</button>
                     </div>
                 </div>
 
-                <!-- Landing Page -->
-                <div class="premium-card p-8 rounded-2xl flex flex-col justify-between" data-aos="fade-up">
+                <div class="card-glass p-8 rounded-2xl flex flex-col justify-between" data-aos="fade-up">
                     <div>
                         <h4 class="text-lg font-bold text-white mb-2">Landing Page (Página Única)</h4>
                         <p class="text-sm text-slate-400 mb-6">Design focado em conversão e velocidade.</p>
                     </div>
                     <div>
                         <div class="text-2xl font-display font-bold text-white mb-1">A partir de R$ 350,00</div>
-                        <button onclick="openCheckout('Landing Page', 'R$ 350,00', 'R$ 460,00', 'SEU_LINK_PIX_LANDING', 'https://buy.stripe.com/8x2eVf75UbxOdOWbmPaIM07')" class="text-primary text-sm font-medium hover:text-white transition mt-2 inline-block">Contratar &rarr;</button>
+                        <button onclick="openCheckout('Landing Page', 'R$ 350,00', 'R$ 460,00', 'SEU_LINK_PIX_LANDING', 'https://buy.stripe.com/8x2eVf75UbxOdOWbmPaIM07')" class="text-accent text-sm font-medium hover:text-white transition mt-2 inline-block">Contratar &rarr;</button>
                     </div>
                 </div>
 
-                <!-- Google GSC -->
-                <div class="premium-card p-8 rounded-2xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-glass p-8 rounded-2xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
                     <div>
                         <h4 class="text-lg font-bold text-white mb-2">Configuração Google (GSC)</h4>
                         <p class="text-sm text-slate-400 mb-6">Indexação técnica nos motores de busca.</p>
                     </div>
                     <div>
                         <div class="text-2xl font-display font-bold text-white mb-1">A partir de R$ 250,00</div>
-                        <button onclick="openCheckout('Configuração Google', 'R$ 250,00', 'R$ 330,00', 'SEU_LINK_PIX_GOOGLE', 'https://buy.stripe.com/9B64gBai61Xe5iq9eHaIM06')" class="text-primary text-sm font-medium hover:text-white transition mt-2 inline-block">Contratar &rarr;</button>
+                        <button onclick="openCheckout('Configuração Google', 'R$ 250,00', 'R$ 330,00', 'SEU_LINK_PIX_GOOGLE', 'https://buy.stripe.com/9B64gBai61Xe5iq9eHaIM06')" class="text-accent text-sm font-medium hover:text-white transition mt-2 inline-block">Contratar &rarr;</button>
                     </div>
                 </div>
                 
-                <!-- Domínio -->
-                <div class="premium-card p-8 rounded-2xl flex flex-col justify-between" data-aos="fade-up">
+                <div class="card-glass p-8 rounded-2xl flex flex-col justify-between" data-aos="fade-up">
                     <div>
                         <h4 class="text-lg font-bold text-white mb-2">Registro de Domínio</h4>
                         <p class="text-sm text-slate-400 mb-6">Garantia do nome da sua marca na internet (Anual).</p>
                     </div>
                     <div>
                         <div class="text-2xl font-display font-bold text-white mb-1">A partir de R$ 60,00</div>
-                        <button onclick="openCheckout('Registro de Domínio', 'R$ 60,00', 'R$ 80,00', 'SEU_LINK_PIX_DOMINIO', 'https://buy.stripe.com/5kQ00l75UdFWh183UnaIM05')" class="text-primary text-sm font-medium hover:text-white transition mt-2 inline-block">Contratar &rarr;</button>
+                        <button onclick="openCheckout('Registro de Domínio', 'R$ 60,00', 'R$ 80,00', 'SEU_LINK_PIX_DOMINIO', 'https://buy.stripe.com/5kQ00l75UdFWh183UnaIM05')" class="text-accent text-sm font-medium hover:text-white transition mt-2 inline-block">Contratar &rarr;</button>
                     </div>
                 </div>
 
-                <!-- E-mail Adicional -->
-                <div class="premium-card p-8 rounded-2xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-glass p-8 rounded-2xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
                     <div>
                         <h4 class="text-lg font-bold text-white mb-2">E-mail Adicional (25GB)</h4>
                         <p class="text-sm text-slate-400 mb-6">Conta extra para sua equipe (Anual).</p>
                     </div>
                     <div>
                         <div class="text-2xl font-display font-bold text-white mb-1">A partir de R$ 72,00</div>
-                        <button onclick="openCheckout('E-mail Adicional', 'R$ 72,00', 'R$ 85,00', 'SEU_LINK_PIX_EMAIL', 'https://buy.stripe.com/4gMcN761QgS83ai3UnaIM02')" class="text-primary text-sm font-medium hover:text-white transition mt-2 inline-block">Contratar &rarr;</button>
+                        <button onclick="openCheckout('E-mail Adicional', 'R$ 72,00', 'R$ 85,00', 'SEU_LINK_PIX_EMAIL', 'https://buy.stripe.com/4gMcN761QgS83ai3UnaIM02')" class="text-accent text-sm font-medium hover:text-white transition mt-2 inline-block">Contratar &rarr;</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MODAL DE CHECKOUT (Invisível por padrão) -->
+    <!-- MODAL DE CHECKOUT -->
     <div id="checkoutModal" class="fixed inset-0 z-[100] hidden items-center justify-center">
-        <!-- Fundo escuro com desfoque -->
-        <div class="absolute inset-0 bg-background/80 backdrop-blur-sm" onclick="closeCheckout()"></div>
-        
-        <!-- Caixa do Modal -->
-        <div class="relative bg-surface border border-white/10 p-8 md:p-10 rounded-3xl shadow-2xl max-w-md w-full mx-4 transform scale-95 opacity-0 transition-all duration-300" id="modalContent">
-            
-            <!-- Botão Fechar -->
+        <div class="absolute inset-0 bg-dark/80 backdrop-blur-sm" onclick="closeCheckout()"></div>
+        <div class="relative bg-card border border-white/10 p-8 md:p-10 rounded-3xl shadow-2xl max-w-md w-full mx-4 transform scale-95 opacity-0 transition-all duration-300" id="modalContent">
             <button onclick="closeCheckout()" class="absolute top-6 right-6 text-slate-500 hover:text-white transition">
                 <i class="fas fa-times text-xl"></i>
             </button>
-
             <div class="text-center mb-8">
-                <div class="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-4">Finalizar Pedido</div>
+                <div class="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-4">Finalizar Pedido</div>
                 <h3 id="modalTitle" class="text-2xl font-display font-bold text-white mb-2">Nome do Plano</h3>
                 <p class="text-slate-400 text-sm">Como você prefere realizar o investimento?</p>
             </div>
-
             <div class="space-y-4">
-                <!-- Opção PIX -->
                 <a id="btnPix" href="#" target="_blank" class="block w-full p-5 rounded-2xl border border-green-500/30 bg-green-500/5 hover:bg-green-500/10 transition-all group relative overflow-hidden">
                     <div class="absolute top-0 right-0 bg-green-500 text-white text-[9px] font-bold px-3 py-1 rounded-bl-lg uppercase tracking-widest">Maior Desconto</div>
                     <div class="flex items-center gap-4">
@@ -214,8 +220,6 @@
                         </div>
                     </div>
                 </a>
-
-                <!-- Opção Cartão -->
                 <a id="btnCard" href="#" target="_blank" class="block w-full p-5 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all group">
                     <div class="flex items-center gap-4">
                         <i class="fas fa-credit-card text-2xl text-slate-400 group-hover:text-white transition"></i>
@@ -226,12 +230,12 @@
                     </div>
                 </a>
             </div>
-            
             <p class="text-center text-slate-500 text-[10px] mt-6"><i class="fas fa-lock mr-1"></i> Pagamento 100% seguro processado por Stripe e Mercado Pago.</p>
         </div>
     </div>
 
-    <footer class="py-12 border-t border-white/5 text-center mt-12">
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 text-center bg-darker relative z-10">
         <div class="font-display font-bold text-xl text-white mb-2 tracking-tighter">CS studios</div>
         <p class="text-slate-600 text-[10px] uppercase tracking-[0.3em]">Design & Infraestrutura Digital</p>
     </footer>
@@ -239,20 +243,16 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 800, once: true });
-
-        // Lógica do Modal de Checkout
         const modal = document.getElementById('checkoutModal');
         const modalContent = document.getElementById('modalContent');
         
         function openCheckout(title, pixPrice, cardPrice, pixLink, stripeLink) {
-            // Preenche os dados
             document.getElementById('modalTitle').innerText = title;
             document.getElementById('pricePix').innerText = pixPrice;
             document.getElementById('priceCard').innerText = cardPrice;
             document.getElementById('btnPix').href = pixLink;
             document.getElementById('btnCard').href = stripeLink;
             
-            // Mostra o modal com animação
             modal.classList.remove('hidden');
             modal.classList.add('flex');
             setTimeout(() => {
@@ -262,7 +262,6 @@
         }
 
         function closeCheckout() {
-            // Esconde o modal com animação
             modalContent.classList.remove('scale-100', 'opacity-100');
             modalContent.classList.add('scale-95', 'opacity-0');
             setTimeout(() => {
