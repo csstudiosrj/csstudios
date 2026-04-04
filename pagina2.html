@@ -17,7 +17,7 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans:['Outfit', 'sans-serif'], display:['Space Grotesk', 'sans-serif'] },
+                    fontFamily: { sans:['Outfit', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] },
                     colors: { background: '#030712', surface: '#0B1120', primary: '#3B82F6' }
                 }
             }
@@ -42,7 +42,7 @@
             </div>
 
             <div class="hidden md:flex gap-4 items-center">
-                <a href="https://mail.zoho.com" target="_blank" class="text-xs text-slate-400 hover:text-white transition flex items-center gap-2">
+                <a href="https://www.larksuite.com/" target="_blank" class="text-xs text-slate-400 hover:text-white transition flex items-center gap-2">
                     <i class="fas fa-envelope"></i> Webmail
                 </a>
                 <a href="https://seu-link-do-whmcs.com" target="_blank" class="bg-white/10 hover:bg-white/20 text-white px-5 py-2 rounded-full text-xs font-bold transition flex items-center gap-2 border border-white/5 shadow-[0_0_15px_rgba(255,255,255,0.05)]">
@@ -58,17 +58,20 @@
         
         <div class="container mx-auto px-6 relative z-10 text-center">
             <div data-aos="fade-up" data-aos-duration="1000">
-                <span class="inline-block py-1 px-3 rounded-full border border-white/10 bg-white/5 text-[10px] font-medium uppercase tracking-widest text-slate-300 mb-8">
+                
+                <!-- Selo Colorido Restaurado -->
+                <span class="inline-block py-1 px-4 rounded-full border border-primary/30 bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-widest mb-8 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
                     Design • Performance • Conversão
                 </span>
-                <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white tracking-tighter leading- mb-6 max-w-5xl mx-auto">
+
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white tracking-tighter leading-[1.1] mb-6 max-w-5xl mx-auto">
                     Sua empresa merece mais do que <span class="text-blue-500">uma rede social.</span>
                 </h1>
                 <p class="text-lg md:text-xl text-slate-400 font-light max-w-2xl mx-auto mb-12 leading-relaxed">
                     Construímos ativos digitais de alto padrão. Páginas otimizadas, infraestrutura segura e design focado em transformar visitantes em clientes reais.
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="planos.html" class="w-full sm:w-auto bg-white text-background px-8 py-4 rounded-full text-sm font-semibold hover:bg-slate-200 transition-all">
+                    <a href="planos.html" class="w-full sm:w-auto bg-white text-background px-8 py-4 rounded-full text-sm font-semibold hover:bg-slate-200 transition-all shadow-[0_0_30px_rgba(255,255,255,0.1)]">
                         Ver Planos e Valores
                     </a>
                     <a href="#servicos" class="w-full sm:w-auto text-slate-300 px-8 py-4 text-sm font-medium hover:text-white transition-all flex items-center justify-center gap-2">
@@ -209,12 +212,39 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-12 border-t border-white/5 text-center bg-background">
-        <div class="container mx-auto px-6">
-            <div class="font-display font-bold text-xl text-white mb-2 tracking-tighter">CS studios</div>
-            <p class="text-slate-600 text-[10px] uppercase tracking-[0.3em] mb-6">Design & Infraestrutura Digital</p>
-            <p class="text-slate-500 text-xs">&copy; 2026 CS studios. Todos os direitos reservados.</p>
+    <!-- Footer Completo Restaurado -->
+    <footer class="bg-background border-t border-white/5 py-16 relative z-10">
+        <div class="container mx-auto px-6 grid md:grid-cols-4 gap-12 mb-12 border-b border-white/5 pb-12">
+            <div class="col-span-1 md:col-span-2">
+                <a href="/" class="flex items-baseline gap-1 mb-6">
+                    <span class="font-display font-bold text-3xl text-white tracking-tighter">CS</span>
+                    <span class="font-light text-sm tracking-[0.3em] text-slate-400 uppercase">studios</span>
+                </a>
+                <p class="text-slate-500 text-sm max-w-sm mb-6">Elevamos o padrão da sua presença digital com infraestrutura sólida e design de ponta.</p>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Acessos</h4>
+                <ul class="space-y-4 text-sm text-slate-400">
+                    <li><a href="https://seu-link-do-whmcs.com" target="_blank" class="hover:text-primary transition">Portal do Cliente</a></li>
+                    <li><a href="https://www.larksuite.com/" target="_blank" class="hover:text-primary transition">Acessar Webmail</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Legal</h4>
+                <ul class="space-y-4 text-sm text-slate-400">
+                    <li><a href="legal/termos.html" class="hover:text-primary transition">Termos de Uso</a></li>
+                    <li><a href="legal/privacidade.html" class="hover:text-primary transition">Política de Privacidade</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-slate-600 text-xs tracking-widest uppercase">&copy; 2026 CS studios. Todos os direitos reservados.</p>
+            <div class="flex gap-4 text-slate-500">
+                <a href="#" class="hover:text-white transition"><i class="fab fa-instagram text-lg"></i></a>
+                <a href="https://wa.me/5521996882977" target="_blank" class="hover:text-white transition"><i class="fab fa-whatsapp text-lg"></i></a>
+            </div>
         </div>
     </footer>
 
