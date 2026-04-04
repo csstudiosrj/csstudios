@@ -13,7 +13,7 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Outfit', 'sans-serif'], display:['Space Grotesk', 'sans-serif'] },
+                    fontFamily: { sans:['Outfit', 'sans-serif'], display:['Space Grotesk', 'sans-serif'] },
                     colors: { dark: '#050505', card: '#111111', accent: '#3b82f6' }
                 }
             }
@@ -38,7 +38,7 @@
                 <span class="font-light text-sm tracking-[0.3em] text-slate-400 uppercase">studios</span>
             </a>
             <div class="hidden md:flex gap-4 items-center">
-                <a href="https://seu-link-do-webmail.com" target="_blank" class="text-xs text-slate-400 hover:text-white transition flex items-center gap-2">
+                <a href="https://www.larksuite.com/" target="_blank" class="text-xs text-slate-400 hover:text-white transition flex items-center gap-2">
                     <i class="fas fa-envelope"></i> Webmail
                 </a>
                 <a href="https://seu-link-do-whmcs.com" target="_blank" class="bg-white/10 hover:bg-white/20 text-white px-5 py-2 rounded-full text-xs font-bold transition flex items-center gap-2 border border-white/5">
@@ -48,50 +48,72 @@
         </div>
     </nav>
 
-    <div class="container mx-auto px-6 relative z-10 max-w-2xl text-center">
+    <div class="container mx-auto px-6 relative z-10 max-w-3xl text-center">
         <!-- Card de Sucesso -->
-        <div class="glass-card p-8 md:p-16 rounded-[2.5rem] shadow-2xl border-t-4 border-t-green-500">
+        <div class="glass-card p-8 md:p-14 rounded-[2.5rem] shadow-2xl border-t-4 border-t-green-500">
             
-            <div class="w-24 h-24 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-8">
-                <i class="fas fa-check text-5xl text-green-500"></i>
+            <div class="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-check text-4xl text-green-500"></i>
             </div>
 
             <h1 class="text-3xl md:text-5xl font-display font-bold text-white mb-4 tracking-tighter">Pagamento Confirmado!</h1>
             <p class="text-slate-400 text-lg mb-10">Bem-vindo(a) à CS studios. Sua estrutura digital de alto nível começou a ser preparada.</p>
 
-            <div class="text-left bg-black/30 p-6 md:p-8 rounded-2xl border border-white/5 mb-10">
-                <h3 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Atenção aos Próximos Passos:</h3>
+            <div class="text-left bg-black/40 p-6 md:p-10 rounded-3xl border border-white/5 mb-10">
+                <h3 class="text-white font-bold mb-8 uppercase tracking-widest text-xs border-b border-white/10 pb-4">Atenção aos Próximos Passos:</h3>
                 
-                <ul class="space-y-6">
-                    <li class="flex gap-4">
-                        <div class="w-8 h-8 rounded-full bg-accent/20 text-accent flex items-center justify-center shrink-0 font-bold">1</div>
+                <ul class="space-y-8">
+                    <!-- Passo 1: E-mail de Atendimento -->
+                    <li class="flex gap-5">
+                        <div class="w-10 h-10 rounded-full bg-accent/20 text-accent flex items-center justify-center shrink-0 font-bold text-lg">1</div>
                         <div>
-                            <h4 class="text-white font-bold">Envio de Materiais (Urgente)</h4>
-                            <p class="text-slate-500 text-sm">Para iniciarmos, envie imediatamente seus textos, imagens de referência e sua logo para o e-mail: <br><a href="mailto:cscomrj02@gmail.com" class="text-accent font-bold hover:underline">cscomrj02@gmail.com</a></p>
-                            <p class="text-red-400 text-xs mt-2 font-bold"><i class="fas fa-exclamation-triangle"></i> IMPORTANTE: A logo só será aceita em formato PNG com fundo transparente.</p>
+                            <h4 class="text-white font-bold text-lg mb-1">Fique de olho no seu E-mail</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Você receberá nas próximas horas uma mensagem da nossa equipe através do e-mail <span class="text-accent font-medium">atendimento@csstudios.site</span> com o detalhamento do seu projeto. <br>
+                                <span class="text-yellow-500 font-bold mt-2 inline-block"><i class="fas fa-exclamation-triangle"></i> Importante:</span> Verifique também a sua caixa de <strong>SPAM ou Lixo Eletrônico</strong>.
+                            </p>
                         </div>
                     </li>
-                    <li class="flex gap-4">
-                        <div class="w-8 h-8 rounded-full bg-accent/20 text-accent flex items-center justify-center shrink-0 font-bold">2</div>
+
+                    <!-- Passo 2: Envio para Desenvolvedor -->
+                    <li class="flex gap-5">
+                        <div class="w-10 h-10 rounded-full bg-accent/20 text-accent flex items-center justify-center shrink-0 font-bold text-lg">2</div>
                         <div>
-                            <h4 class="text-white font-bold">Prazos e Domínio</h4>
-                            <p class="text-slate-500 text-sm">O desenvolvimento será finalizado em <strong>até 4 dias úteis</strong> após o recebimento dos materiais. Após a sua aprovação final, o prazo técnico para a conexão do domínio na internet é de até <strong>48h úteis</strong>.</p>
+                            <h4 class="text-white font-bold text-lg mb-1">Envio de Materiais (Urgente)</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Para iniciarmos a criação, você deverá responder o nosso contato enviando seus textos, imagens de referência e logotipo <strong>exclusivamente</strong> para o e-mail: <br>
+                                <a href="mailto:desenvolvedor@csstudios.site" class="text-accent font-bold hover:underline mt-1 inline-block">desenvolvedor@csstudios.site</a>
+                            </p>
+                            <p class="text-red-400 text-xs mt-2 font-bold">A logo só será aceita em formato PNG com fundo transparente e em alta resolução.</p>
                         </div>
                     </li>
-                    <li class="flex gap-4">
-                        <div class="w-8 h-8 rounded-full bg-accent/20 text-accent flex items-center justify-center shrink-0 font-bold">3</div>
+
+                    <!-- Passo 3: Prazos e Revisões -->
+                    <li class="flex gap-5">
+                        <div class="w-10 h-10 rounded-full bg-accent/20 text-accent flex items-center justify-center shrink-0 font-bold text-lg">3</div>
                         <div>
-                            <h4 class="text-white font-bold">Revisões e Atualizações</h4>
-                            <p class="text-slate-500 text-sm">Será permitida apenas <strong>1 (uma) revisão</strong> após a entrega do layout. Caso precise de atualizações futuras no site após a publicação, o valor cobrado será de <strong>R$ 150,00 (taxa fixa)</strong> por atualização.</p>
+                            <h4 class="text-white font-bold text-lg mb-1">Prazos e Revisões</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                O desenvolvimento será finalizado em <strong>até 4 dias úteis</strong> após o recebimento dos materiais. Você terá direito a <strong>1 (uma) revisão</strong> após a entrega do layout. <br>
+                                <span class="block mt-2 opacity-70 text-xs">Atualizações futuras no site após a publicação terão o valor fixo de R$ 150,00 por solicitação.</span>
+                            </p>
                         </div>
                     </li>
                 </ul>
+
+                <!-- Contato Financeiro -->
+                <div class="mt-8 pt-6 border-t border-white/10 flex items-start gap-4">
+                    <i class="fas fa-file-invoice-dollar text-slate-500 mt-1"></i>
+                    <p class="text-slate-500 text-xs leading-relaxed">
+                        Dúvidas sobre pagamentos, notas fiscais ou renovações? <br>
+                        Fale com nosso setor financeiro: <a href="mailto:financeiro@csstudios.site" class="text-slate-300 hover:text-white transition font-medium">financeiro@csstudios.site</a>
+                    </p>
+                </div>
             </div>
 
-            <a href="https://wa.me/5521996882977" target="_blank" class="inline-flex items-center justify-center gap-3 w-full bg-accent hover:bg-blue-600 text-white py-4 rounded-xl font-bold transition shadow-[0_0_20px_rgba(59,130,246,0.3)]">
-                <i class="fab fa-whatsapp text-xl"></i> Falar com a Equipe Agora
+            <a href="https://wa.me/5521996882977" target="_blank" class="inline-flex items-center justify-center gap-3 w-full bg-accent hover:bg-blue-600 text-white py-5 rounded-xl font-bold transition shadow-[0_0_20px_rgba(59,130,246,0.3)] uppercase tracking-widest text-sm">
+                <i class="fab fa-whatsapp text-xl"></i> Falar com o Atendimento
             </a>
-            <p class="text-slate-500 text-xs mt-4">Fique de olho no seu e-mail e WhatsApp.</p>
         </div>
     </div>
 
