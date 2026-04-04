@@ -7,7 +7,7 @@
     <meta name="description" content="Transformamos visitantes em clientes com páginas de alta conversão e infraestrutura premium.">
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -17,7 +17,7 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans:['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] },
+                    fontFamily: { sans:['Outfit', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] },
                     colors: { background: '#030712', surface: '#0B1120', primary: '#3B82F6' }
                 }
             }
@@ -29,27 +29,31 @@
     <!-- Navbar -->
     <nav class="fixed w-full z-50 glass-header transition-all duration-300">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="/" class="flex items-center gap-2">
-                <span class="font-display font-bold text-2xl text-white tracking-tighter">CS</span>
+            <a href="/" class="flex items-center gap-2 group">
+                <span class="font-display font-bold text-3xl text-white tracking-tighter group-hover:text-primary transition-colors">CS</span>
                 <span class="text-[10px] font-medium uppercase tracking-[0.2em] text-slate-400 mt-1">studios</span>
             </a>
             
-            <div class="hidden md:flex gap-8 text-xs font-medium uppercase tracking-widest text-slate-400">
-                <a href="#expertise" class="hover:text-white transition-colors">Expertise</a>
-                <a href="#metodo" class="hover:text-white transition-colors">Método</a>
-                <a href="#faq" class="hover:text-white transition-colors">Dúvidas</a>
-                <a href="planos.html" class="text-white hover:text-primary transition-colors">Planos e Valores</a>
+            <div class="hidden lg:flex gap-8 items-center text-xs font-medium uppercase tracking-widest text-slate-400">
+                <a href="#servicos" class="hover:text-white transition-colors">Serviços</a>
+                <a href="#infra" class="hover:text-white transition-colors">Infraestrutura</a>
+                <a href="planos.html" class="text-primary hover:text-white transition-colors font-bold">Planos e Valores</a>
+                <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
             </div>
 
-            <a href="https://wa.me/5521996882977" target="_blank" class="hidden md:flex items-center gap-2 text-xs font-medium text-white border border-white/10 px-5 py-2 rounded-full hover:bg-white/5 transition-all">
-                Falar com a equipe
-            </a>
+            <div class="hidden md:flex gap-4 items-center">
+                <a href="https://webmail.zoho.com" target="_blank" class="text-xs text-slate-400 hover:text-white transition flex items-center gap-2">
+                    <i class="fas fa-envelope"></i> Webmail
+                </a>
+                <a href="https://seu-link-do-whmcs.com" target="_blank" class="bg-white/10 hover:bg-white/20 text-white px-5 py-2 rounded-full text-xs font-bold transition flex items-center gap-2 border border-white/5 shadow-[0_0_15px_rgba(255,255,255,0.05)]">
+                    <i class="fas fa-user"></i> Portal do Cliente
+                </a>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
-        <!-- Glow effects sutis -->
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/10 blur-[120px] rounded-full pointer-events-none"></div>
         
         <div class="container mx-auto px-6 relative z-10 text-center">
@@ -57,20 +61,17 @@
                 <span class="inline-block py-1 px-3 rounded-full border border-white/10 bg-white/5 text-[10px] font-medium uppercase tracking-widest text-slate-300 mb-8">
                     Design • Performance • Conversão
                 </span>
-                
                 <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white tracking-tighter leading-[1.1] mb-6 max-w-5xl mx-auto">
-                    Sua empresa merece mais do que <span class="text-gradient-blue">uma rede social.</span>
+                    Sua empresa merece mais do que <span class="text-blue-500">uma rede social.</span>
                 </h1>
-                
                 <p class="text-lg md:text-xl text-slate-400 font-light max-w-2xl mx-auto mb-12 leading-relaxed">
                     Construímos ativos digitais de alto padrão. Páginas otimizadas, infraestrutura segura e design focado em transformar visitantes em clientes reais.
                 </p>
-                
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <a href="planos.html" class="w-full sm:w-auto bg-white text-background px-8 py-4 rounded-full text-sm font-semibold hover:bg-slate-200 transition-all">
                         Ver Planos e Valores
                     </a>
-                    <a href="#expertise" class="w-full sm:w-auto text-slate-300 px-8 py-4 text-sm font-medium hover:text-white transition-all flex items-center justify-center gap-2">
+                    <a href="#servicos" class="w-full sm:w-auto text-slate-300 px-8 py-4 text-sm font-medium hover:text-white transition-all flex items-center justify-center gap-2">
                         Entender o processo <i class="fas fa-arrow-down text-[10px]"></i>
                     </a>
                 </div>
@@ -78,182 +79,83 @@
         </div>
     </section>
 
-    <!-- Por que ter um site? (O Problema e a Solução) -->
-    <section id="metodo" class="py-32 bg-surface relative border-y border-white/5">
+    <!-- Serviços com Ícones Coloridos -->
+    <section id="servicos" class="py-24 relative z-10 border-t border-white/5 bg-darker">
         <div class="container mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div data-aos="fade-right">
-                    <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-6 tracking-tight leading-tight">
-                        A invisibilidade digital custa caro.
-                    </h2>
-                    <p class="text-slate-400 leading-relaxed mb-8 font-light">
-                        Depender exclusivamente de redes sociais coloca o seu negócio à mercê de algoritmos imprevisíveis. Um site próprio não é apenas um cartão de visitas, é o seu terreno na internet. É onde você dita as regras, transmite autoridade e atende seu cliente 24 horas por dia, 7 dias por semana.
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-4 tracking-tighter">Nossa <span class="text-slate-500">Expertise</span></h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card-glass p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-500 mb-6"><i class="fas fa-code text-xl"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-2">Landing Pages</h3>
+                    <p class="text-slate-400 text-sm">Páginas únicas focadas em conversão, design exclusivo e ultrarrápido.</p>
+                </div>
+                <div class="card-glass p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center text-yellow-500 mb-6"><i class="fab fa-google text-xl"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-2">Google Index</h3>
+                    <p class="text-slate-400 text-sm">Indexação técnica para sua empresa ser encontrada no maior buscador.</p>
+                </div>
+                <div class="card-glass p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 rounded-full bg-pink-500/20 flex items-center justify-center text-pink-500 mb-6"><i class="fas fa-pen-nib text-xl"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-2">Identidade Visual</h3>
+                    <p class="text-slate-400 text-sm">Criação de logotipos e tipografia estratégica para autoridade da marca.</p>
+                </div>
+                <div class="card-glass p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center text-green-500 mb-6"><i class="fas fa-server text-xl"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-2">Infraestrutura</h3>
+                    <p class="text-slate-400 text-sm">Hospedagem de alta performance, SSL e e-mail corporativo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infraestrutura -->
+    <section id="infra" class="py-24 relative z-10 border-t border-white/5 bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-6 tracking-tighter">Infraestrutura <span class="text-blue-500">Padrão Ouro</span></h2>
+                    <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+                        Nossos servidores são mantidos em datacenters de classe mundial. Garantimos segurança, velocidade e estabilidade para que você foque apenas no seu negócio.
                     </p>
-                    <ul class="space-y-4 text-sm text-slate-300">
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-primary"></i> Posicionamento profissional no Google.</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-primary"></i> Credibilidade imediata para novos clientes.</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-primary"></i> Ambiente livre da concorrência.</li>
+                    <ul class="space-y-6 text-slate-300">
+                        <li class="flex gap-4"><i class="fas fa-shield-halved text-green-500 text-xl"></i><div><h4 class="text-white font-bold">Certificado SSL Gratuito</h4><p class="text-slate-500 text-sm">Site seguro com cadeado HTTPS ativo.</p></div></li>
+                        <li class="flex gap-4"><i class="fas fa-gauge-high text-blue-500 text-xl"></i><div><h4 class="text-white font-bold">Uptime de 99.9%</h4><p class="text-slate-500 text-sm">Seu site no ar, sem quedas.</p></div></li>
                     </ul>
                 </div>
-                <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
-                    <div class="premium-card p-8 rounded-3xl flex flex-col justify-center aspect-square">
-                        <i class="fas fa-search text-3xl text-slate-500 mb-4"></i>
-                        <h3 class="text-white font-display font-bold text-xl mb-2">Busca</h3>
-                        <p class="text-xs text-slate-400">Seja encontrado por quem já procura pelo seu serviço.</p>
-                    </div>
-                    <div class="premium-card p-8 rounded-3xl flex flex-col justify-center aspect-square mt-8">
-                        <i class="fas fa-bolt text-3xl text-slate-500 mb-4"></i>
-                        <h3 class="text-white font-display font-bold text-xl mb-2">Velocidade</h3>
-                        <p class="text-xs text-slate-400">Páginas ultrarrápidas que retêm a atenção do usuário.</p>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <div class="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2034&auto=format&fit=crop" class="w-full h-full object-cover filter grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-1000">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Nossa Expertise -->
-    <section id="expertise" class="py-32">
-        <div class="container mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-20" data-aos="fade-up">
-                <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-6 tracking-tight">Nossa Expertise</h2>
-                <p class="text-slate-400 font-light">Dominamos as ferramentas necessárias para construir e hospedar a sua marca com excelência técnica.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Servico 1 -->
-                <div class="premium-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white mb-6 border border-white/10">
-                        <i class="fas fa-layer-group"></i>
-                    </div>
-                    <h3 class="text-white font-display font-bold text-lg mb-3">Landing Pages</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed">Páginas únicas focadas em conversão. Design responsivo, moderno e alinhado à identidade da sua empresa.</p>
-                </div>
-                <!-- Servico 2 -->
-                <div class="premium-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white mb-6 border border-white/10">
-                        <i class="fab fa-google"></i>
-                    </div>
-                    <h3 class="text-white font-display font-bold text-lg mb-3">Google Index (GSC)</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed">Configuração técnica no Google Search Console para garantir que seu site seja lido e indexado corretamente.</p>
-                </div>
-                <!-- Servico 3 -->
-                <div class="premium-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white mb-6 border border-white/10">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3 class="text-white font-display font-bold text-lg mb-3">Infraestrutura</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed">Hospedagem premium de alta performance, certificado SSL de segurança e contas de e-mail corporativas.</p>
-                </div>
-                <!-- Servico 4 -->
-                <div class="premium-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="400">
-                    <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white mb-6 border border-white/10">
-                        <i class="fas fa-pen-nib"></i>
-                    </div>
-                    <h3 class="text-white font-display font-bold text-lg mb-3">Identidade Visual</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed">Criação de logotipos profissionais e tipografia estratégica para transmitir o valor correto da sua marca.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Completo -->
-    <section id="faq" class="py-32 bg-surface border-y border-white/5">
-        <div class="container mx-auto px-6 max-w-4xl">
+    <!-- FAQ -->
+    <section id="faq" class="py-24 relative z-10 border-t border-white/5 bg-darker">
+        <div class="container mx-auto px-6 max-w-3xl">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-4 tracking-tight">Dúvidas Frequentes</h2>
-                <p class="text-slate-400 font-light">Tudo o que você precisa saber antes de iniciar o seu projeto conosco.</p>
+                <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-4 tracking-tighter">Dúvidas Frequentes</h2>
             </div>
-
             <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
-                
-                <!-- Pergunta 1 -->
-                <details class="group premium-card rounded-2xl cursor-pointer p-6">
-                    <summary class="flex justify-between items-center font-bold text-white list-none">
-                        Por que não usar apenas o Instagram ou Facebook?
-                        <span class="transition group-open:rotate-180 text-primary"><i class="fas fa-chevron-down"></i></span>
-                    </summary>
-                    <p class="text-slate-400 text-sm mt-4 leading-relaxed">
-                        Redes sociais são excelentes para atrair atenção, mas péssimas para fechar negócios complexos. Em um site próprio, você não concorre com memes ou dancinhas. Além disso, o Google é onde as pessoas procuram quando estão prontas para comprar. Se você não tem um site, está perdendo essas vendas para o seu concorrente.
-                    </p>
+                <details class="group card-glass rounded-2xl cursor-pointer p-6">
+                    <summary class="flex justify-between items-center font-bold text-white list-none">Qual o prazo de entrega? <i class="fas fa-chevron-down text-accent"></i></summary>
+                    <p class="text-slate-400 text-sm mt-4">Entrega em até 4 dias úteis após envio dos materiais.</p>
                 </details>
-
-                <!-- Pergunta 2 -->
-                <details class="group premium-card rounded-2xl cursor-pointer p-6">
-                    <summary class="flex justify-between items-center font-bold text-white list-none">
-                        Qual o prazo de entrega do meu site?
-                        <span class="transition group-open:rotate-180 text-primary"><i class="fas fa-chevron-down"></i></span>
-                    </summary>
-                    <p class="text-slate-400 text-sm mt-4 leading-relaxed">
-                        Para a criação de Landing Pages (Páginas Únicas), nosso prazo padrão é de <strong>até 4 dias úteis</strong> após o recebimento de todos os materiais (textos, logo e imagens). Após a sua aprovação do design, a propagação do domínio na internet leva até 48 horas úteis.
-                    </p>
+                <details class="group card-glass rounded-2xl cursor-pointer p-6">
+                    <summary class="flex justify-between items-center font-bold text-white list-none">Preciso pagar mensalidade? <i class="fas fa-chevron-down text-accent"></i></summary>
+                    <p class="text-slate-400 text-sm mt-4">Não, o desenvolvimento é único. Apenas renovação anual de domínio/hospedagem.</p>
                 </details>
-
-                <!-- Pergunta 3 -->
-                <details class="group premium-card rounded-2xl cursor-pointer p-6">
-                    <summary class="flex justify-between items-center font-bold text-white list-none">
-                        Preciso pagar alguma mensalidade para manter o site no ar?
-                        <span class="transition group-open:rotate-180 text-primary"><i class="fas fa-chevron-down"></i></span>
-                    </summary>
-                    <p class="text-slate-400 text-sm mt-4 leading-relaxed">
-                        A criação do site é um pagamento único. No entanto, para que qualquer site exista na internet, ele precisa de um <strong>Domínio</strong> (o seu endereço .com.br) e de uma <strong>Hospedagem</strong> (o servidor onde os arquivos ficam guardados). Esses serviços possuem um custo de manutenção que é cobrado <strong>anualmente</strong>. Você pode contratar esses serviços conosco ou em qualquer outra empresa da sua preferência.
-                    </p>
-                </details>
-
-                <!-- Pergunta 4 -->
-                <details class="group premium-card rounded-2xl cursor-pointer p-6">
-                    <summary class="flex justify-between items-center font-bold text-white list-none">
-                        O que é a Configuração Google (GSC)?
-                        <span class="transition group-open:rotate-180 text-primary"><i class="fas fa-chevron-down"></i></span>
-                    </summary>
-                    <p class="text-slate-400 text-sm mt-4 leading-relaxed">
-                        GSC significa <em>Google Search Console</em>. É o painel oficial do Google para webmasters. Nós configuramos o seu site lá dentro, enviamos o mapa do site (sitemap) e forçamos a leitura dos robôs do Google. Isso garante que o seu site seja encontrado nas pesquisas orgânicas de forma muito mais rápida e correta.
-                    </p>
-                </details>
-
-                <!-- Pergunta 5 -->
-                <details class="group premium-card rounded-2xl cursor-pointer p-6">
-                    <summary class="flex justify-between items-center font-bold text-white list-none">
-                        Terei suporte ou direito a alterações após a entrega?
-                        <span class="transition group-open:rotate-180 text-primary"><i class="fas fa-chevron-down"></i></span>
-                    </summary>
-                    <p class="text-slate-400 text-sm mt-4 leading-relaxed">
-                        Durante o desenvolvimento, você tem direito a 1 (uma) rodada de revisões para garantir que o site fique exatamente como você deseja. Após a aprovação final e publicação do site, qualquer alteração estrutural, troca de textos ou imagens será considerada uma atualização de manutenção, possuindo uma taxa fixa de R$ 150,00 por solicitação.
-                    </p>
-                </details>
-
-                <!-- Pergunta 6 -->
-                <details class="group premium-card rounded-2xl cursor-pointer p-6">
-                    <summary class="flex justify-between items-center font-bold text-white list-none">
-                        Como funciona o pagamento via PIX Parcelado?
-                        <span class="transition group-open:rotate-180 text-primary"><i class="fas fa-chevron-down"></i></span>
-                    </summary>
-                    <p class="text-slate-400 text-sm mt-4 leading-relaxed">
-                        Através do nosso checkout via Mercado Pago, você pode utilizar a função "PIX Parcelado" caso o seu banco ofereça essa modalidade, ou o Mercado Crédito. Dessa forma, você garante o nosso desconto agressivo de pagamento à vista, mas paga as parcelas diretamente para a sua instituição financeira.
-                    </p>
-                </details>
-
             </div>
         </div>
     </section>
 
-    <!-- CTA Final -->
-    <section class="py-24 text-center">
-        <div class="container mx-auto px-6" data-aos="zoom-in">
-            <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-6 tracking-tight">Pronto para elevar o seu negócio?</h2>
-            <p class="text-slate-400 mb-10 max-w-xl mx-auto font-light">Conheça nossos pacotes de desenvolvimento e descubra a solução ideal para o seu momento atual.</p>
-            <a href="planos.html" class="inline-block bg-primary text-white px-10 py-4 rounded-full text-sm font-semibold hover:bg-blue-600 transition-all shadow-[0_0_20px_rgba(59,130,246,0.3)]">
-                Acessar Tabela de Valores
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-12 border-t border-white/5 text-center bg-surface">
-        <div class="container mx-auto px-6">
-            <div class="font-display font-bold text-xl text-white mb-2 tracking-tighter">CS studios</div>
-            <p class="text-slate-600 text-[10px] uppercase tracking-[0.3em] mb-6">Design & Infraestrutura Digital</p>
-            <p class="text-slate-500 text-xs">&copy; 2026 CS studios. Todos os direitos reservados.</p>
-        </div>
+    <footer class="py-12 border-t border-white/5 text-center bg-dark">
+        <div class="font-display font-bold text-xl text-white mb-2 tracking-tighter">CS studios</div>
+        <p class="text-slate-600 text-[10px] uppercase tracking-[0.3em]">Design & Infraestrutura Digital</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
